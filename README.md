@@ -1,0 +1,1 @@
+This is a repo for various scripts I decide to make, a few different languages used here depending on what I need
