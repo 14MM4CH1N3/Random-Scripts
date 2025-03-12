@@ -31,5 +31,10 @@ def push_to_discord(link: str):
     webhook.execute()
 
 if __name__ == "__main__":
+    log = open("comic-grabber.log", "a")
+    log.write(f"{datetime.datetime.now().strftime("%Y/%m/%d - %I:%M:%S %p")} >> Begin comic grab\n")
     link = get_image_link()
+    log.write(f"{datetime.datetime.now().strftime("%Y/%m/%d - %I:%M:%S %p")} >> Image link found, {link}")
     push_to_discord(link)
+    log.write(f"{datetime.datetime.now().strftime("%Y/%m/%d - %I:%M:%S %p")} >> Pushed to Discord")
+    log.close()
