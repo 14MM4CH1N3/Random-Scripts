@@ -32,9 +32,9 @@ def push_to_discord(link: str):
 
 if __name__ == "__main__":
     log = open("comic-grabber.log", "a")
-    log.write(f"{datetime.datetime.now().strftime("%Y/%m/%d - %I:%M:%S %p")} >> Begin comic grab\n")
+    log.write(f"{datetime.datetime.now().strftime('%Y/%m/%d - %I:%M:%S %p')} >> Begin comic grab\n")
     link = get_image_link()
-    log.write(f"{datetime.datetime.now().strftime("%Y/%m/%d - %I:%M:%S %p")} >> Image link found, {link}")
+    log.write(f"{datetime.datetime.now().strftime('%Y/%m/%d - %I:%M:%S %p')} >> Image link found, {link}\n")
     push_to_discord(link)
-    log.write(f"{datetime.datetime.now().strftime("%Y/%m/%d - %I:%M:%S %p")} >> Pushed to Discord")
+    log.write(f"{datetime.datetime.now().strftime('%Y/%m/%d - %I:%M:%S %p')} >> Pushed to Discord\n")
     log.close()
